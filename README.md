@@ -16,5 +16,14 @@ npm run dev
 npm run build
 
 ```
+> 使用方法
+```
 
+template: 
+<pageloading :dp-show="false"></pageloading>
+script:
+import pageloading from 'dp-vue-loading'
+Vue.use(pageloading)
+
+```
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
