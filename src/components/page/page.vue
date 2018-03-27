@@ -9,17 +9,32 @@
     // 写组件时 通过props 实现父组件到子组件的数据传递 这个是必须的  
     props: {
       // 使用组件时的名字 :dp-show
+      // 控制显示
       dpShow: {
         type: Boolean,
         default: true
       },
+      // 控制时间
+      duration: {
+        type: Number,
+        default: 3000
+      }
     },
     data() {
       return {
         shows: this.dpShow
       }
     },
-    mounted () {}
+    watch: {
+      dpShow (val) {
+        this.shows = val
+      }
+    },
+    mounted () {
+      setTimeout(() => {
+        this.shows = false
+      }, this.duration)
+    }
   }
 </script>
 <style scoped>

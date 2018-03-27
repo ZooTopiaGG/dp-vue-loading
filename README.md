@@ -20,8 +20,8 @@ npm run build
 ```
 
 template: 
-<pageloading :dp-show="false"></pageloading>
-script:
+<pageloading :dp-show="false" :duration="3000"></pageloading>
+script main.js:
 import pageloading from 'dp-vue-loading'
 Vue.use(pageloading)
 
